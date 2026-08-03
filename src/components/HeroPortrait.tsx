@@ -11,9 +11,9 @@ export function HeroPortrait() {
   ];
 
   return (
-    <div className="relative w-64 h-80 mx-auto md:mx-0 shrink-0" aria-hidden>
-      <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-purple-500/25 via-fuchsia-400/10 to-emerald-400/25 blur-3xl" />
-      <div className="absolute inset-x-8 top-6 h-40 rounded-full bg-emerald-400/15 blur-2xl" />
+    <div className="relative w-64 h-80 mx-auto md:mx-0 shrink-0 animate-float" aria-hidden>
+      <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-purple-500/25 via-fuchsia-400/10 to-emerald-400/25 blur-3xl animate-halo-pulse" />
+      <div className="absolute inset-x-8 top-6 h-40 rounded-full bg-emerald-400/15 blur-2xl animate-halo-pulse" />
 
       <svg
         viewBox="0 0 240 320"

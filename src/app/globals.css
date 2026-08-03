@@ -24,3 +24,87 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
 }
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in {
+  animation: fade-slide-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+@keyframes halo-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+.animate-halo-pulse {
+  animation: halo-pulse 5s ease-in-out infinite;
+}
+
+@keyframes candles-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-candles-drift {
+  animation: candles-drift 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-slide-in,
+  .animate-float,
+  .animate-halo-pulse,
+  .animate-candles-drift {
+    animation: none;
+  }
+}

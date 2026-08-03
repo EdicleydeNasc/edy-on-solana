@@ -31,7 +31,7 @@ export function CandlestickBackground() {
       aria-hidden
     >
       <svg
-        className="w-full h-full"
+        className="w-full h-full animate-candles-drift"
         preserveAspectRatio="none"
         viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
       >

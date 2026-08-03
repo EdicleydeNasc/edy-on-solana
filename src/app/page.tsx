@@ -40,26 +40,34 @@ export default function Home() {
 
         <section className="max-w-6xl mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-28 flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
+            <h1 className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.05] mb-6 animate-fade-up">
               Construindo o futuro da{" "}
               <span className="bg-gradient-to-r from-purple-400 to-emerald-400 bg-clip-text text-transparent">
                 Web3
               </span>{" "}
               com IA
             </h1>
-            <p className="text-white/50 text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-8">
-              Meu primeiro aplicativo na blockchain Solana. Conecte sua carteira, assine
-              mensagens on-chain e descubra como a nova geração de aplicações descentralizadas
-              funciona na prática.
+            <p
+              className="text-white/50 text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 animate-fade-up"
+              style={{ animationDelay: "120ms" }}
+            >
+              Aplicativo Web3 na blockchain Solana. Conecte sua carteira, assine mensagens
+              on-chain e descubra como a nova geração de aplicações descentralizadas funciona na
+              prática.
             </p>
-            <div className="flex flex-col items-center md:items-start gap-3">
+            <div
+              className="flex flex-col items-center md:items-start gap-3 animate-fade-up"
+              style={{ animationDelay: "240ms" }}
+            >
               <PhantomConnectButton />
               <p className="text-xs text-white/30">
                 Requer a extensão Phantom · ambiente de testes, sem custo
               </p>
             </div>
           </div>
-          <HeroPortrait />
+          <div className="animate-fade-up" style={{ animationDelay: "80ms" }}>
+            <HeroPortrait />
+          </div>
         </section>
 
         <section className="max-w-2xl mx-auto px-6 pb-24">
@@ -68,7 +76,7 @@ export default function Home() {
           </div>
 
           {publicKey ? (
-            <div className="space-y-6">
+            <div className="space-y-6 animate-fade-slide-in">
               <BalanceCard />
               <MessageBoard />
             </div>
