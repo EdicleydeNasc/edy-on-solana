@@ -1,7 +1,7 @@
 "use client";
 
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
+import { PhantomConnectButton } from "@/components/PhantomConnectButton";
 import { WalletAvatar } from "@/components/WalletAvatar";
 import { BalanceCard } from "@/components/BalanceCard";
 import { MessageBoard } from "@/components/MessageBoard";
@@ -30,7 +30,7 @@ export default function Home() {
               blockchain — construído do zero com IA.
             </p>
             <div className="flex items-center gap-3 justify-center md:justify-start">
-              <WalletMultiButton />
+              <PhantomConnectButton />
               {publicKey && <WalletAvatar address={publicKey.toBase58()} />}
             </div>
           </div>
