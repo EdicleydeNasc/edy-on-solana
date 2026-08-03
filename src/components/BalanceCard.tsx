@@ -47,7 +47,7 @@ export function BalanceCard() {
   const brlValue = solBalance != null && brlPrice != null ? solBalance * brlPrice : null;
 
   return (
-    <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur">
+    <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-6 backdrop-blur shadow-[0_0_40px_-20px_rgba(153,69,255,0.4)]">
       <div className="flex items-center text-sm text-white/60 mb-1">
         Saldo
         <InfoTooltip text="É o quanto de SOL (a moeda da rede Solana) essa carteira tem. Como estamos na Devnet, é SOL de teste — não vale dinheiro real." />

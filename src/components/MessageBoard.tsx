@@ -46,7 +46,7 @@ export function MessageBoard() {
   if (!publicKey) return null;
 
   return (
-    <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur">
+    <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-6 backdrop-blur shadow-[0_0_40px_-20px_rgba(20,241,149,0.35)]">
       <div className="flex items-center text-sm text-white/60 mb-3">
         Mural de mensagens assinadas
         <InfoTooltip text="Ao enviar, sua carteira 'assina' a mensagem digitalmente — uma prova criptográfica de que foi você quem escreveu, sem gastar nada e sem enviar transação para a blockchain." />
@@ -63,7 +63,7 @@ export function MessageBoard() {
         <button
           onClick={handleSend}
           disabled={signing || !text.trim()}
-          className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-emerald-500 text-white text-sm font-medium disabled:opacity-40 whitespace-nowrap"
+          className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-emerald-500 text-white text-sm font-semibold disabled:opacity-40 whitespace-nowrap hover:brightness-110 transition"
         >
           {signing ? "Assinando..." : "Assinar e enviar"}
         </button>

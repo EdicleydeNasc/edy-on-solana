@@ -52,9 +52,14 @@ export function PhantomConnectButton() {
     <button
       onClick={handleClick}
       disabled={connecting}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-emerald-500 text-white text-sm font-semibold hover:opacity-90 transition disabled:opacity-60"
+      className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-purple-500 to-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_-8px_rgba(153,69,255,0.6)] transition hover:shadow-[0_0_40px_-6px_rgba(20,241,149,0.55)] hover:brightness-110 disabled:opacity-60"
     >
-      👻 {label}
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <rect x="3" y="6" width="18" height="13" rx="3" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M3 10h18" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="16.5" cy="14" r="1.4" fill="currentColor" />
+      </svg>
+      {label}
     </button>
   );
 }

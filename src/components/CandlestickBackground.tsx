@@ -23,7 +23,11 @@ export function CandlestickBackground() {
 
   return (
     <div
-      className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.14]"
+      className="pointer-events-none absolute inset-x-0 bottom-0 h-[420px] overflow-hidden opacity-[0.06]"
+      style={{
+        maskImage: "linear-gradient(to top, black, transparent)",
+        WebkitMaskImage: "linear-gradient(to top, black, transparent)",
+      }}
       aria-hidden
     >
       <svg
