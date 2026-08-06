@@ -13,9 +13,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Edy on Solana";
+const description =
+  "Conecte sua carteira Solana, veja seu saldo e assine mensagens on-chain.";
+
 export const metadata: Metadata = {
-  title: "Edy on Solana",
-  description: "App educativo de carteira Solana feito por Edy com Claude Code",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://edy-on-solana.vercel.app",
+    siteName: title,
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
